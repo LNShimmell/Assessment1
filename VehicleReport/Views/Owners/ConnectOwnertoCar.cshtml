@@ -1,0 +1,38 @@
+﻿@model VehicleReport.Utility.OwnersVehicle
+@{
+    ViewBag.Title = "ConnectOwnertoCar";
+}
+
+<h2>@Model.Owner.FirstName @Model.Owner.LastName</h2>
+
+<table class="table">
+
+
+    <tr>
+        <th>
+            Make
+        </th>
+        <th>
+            Model
+        </th>
+        <th>
+            Year
+        </th>
+
+    </tr>
+    @foreach (var v in Model.Vehicles) {
+
+        <tr>
+            <Td>
+                @v.Make
+            </Td>
+            <td>
+                @v.Model
+            </td>
+            <td>
+                @v.Year
+            </td>
+        </tr>
+    }
+</table>
+
